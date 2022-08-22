@@ -412,17 +412,17 @@
                         <a class="link footer-socials-link" target="_blank" rel="noopener noreferrer"
                             href="https://twitter.com/?lang=ru" aria-label="Твиттер">
                             <svg class="footers-icons" width="20" height="20">
-                                <use href="./images/icons.svg#twitter""></use>
+                                <use href="./images/icons.svg#twitter"></use>
                             </svg>
                         </a>
                     </li>
                     <li class=" footer-socials-item">
-                                    <a class="link footer-socials-link" target="_blank" rel="noopener noreferrer"
-                                        href="https://www.facebook.com/" aria-label="Фейсбук">
-                                        <svg class="footers-icons" width="20" height="20">
-                                            <use href="./images/icons.svg#facebook"></use>
-                                        </svg>
-                                    </a>
+                        <a class="link footer-socials-link" target="_blank" rel="noopener noreferrer"
+                            href="https://www.facebook.com/" aria-label="Фейсбук">
+                            <svg class="footers-icons" width="20" height="20">
+                                <use href="./images/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
                     </li>
                     <li class="footer-socials-item">
                         <a class="link footer-socials-link" target="_blank" rel="noopener noreferrer"
@@ -434,8 +434,24 @@
                     </li>
                 </ul>
             </div>
+            <!-- Subscribe -->
+            <div class="subscribe-container">
+                <p class="footer-socials-title subscribe-slogan">Подпишитесь на рассылку</p>
+                <form class="subsribe-form">
+                    <label class="email-label visually-hidden" for="mail-subscribe"></label>
+                    <input class="email-input" type="email" name="mail-subscribe" id="mail-subscribe"
+                        placeholder="E-mail" required />
+                    <button class="subscribe-btn" type="submit">
+                        Подписаться
+                        <svg class="subscribe-icon" width="24" height="24">
+                            <use href="./images/icons.svg#send-footer"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
+
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -444,9 +460,62 @@
                     <use href="./images/icons.svg#close-black-icon"></use>
                 </svg>
             </button>
+
+            <!-- Registration form -->
+
+            <form class="form modal-form">
+                <strong class="title form-title">Оставьте свои данные, мы вам перезвоним</strong>
+
+                <label class="registration-label" for="name">Имя</label>
+                <div class="input-field">
+                    <input class="form-input" type="text" name="name" id="name" placeholder="" autofocus required />
+                    <svg class="registration-icon" width="18" height="18">
+                        <use href="./images/icons.svg#person-form"></use>
+                    </svg>
+                </div>
+
+                <label class="registration-label" for="tel">Телефон</label>
+                <div class="input-field">
+                    <input class="form-input" type="tel" name="tel" id="tel" placeholder="" required />
+                    <svg class="registration-icon" width="18" height="18">
+                        <use href="./images/icons.svg#phone-form"></use>
+                    </svg>
+                </div>
+
+                <label class="registration-label" for="mail">Почта</label>
+                <div class="input-field">
+                    <input class="form-input" type="email" name="mail" id="mail" placeholder="" required />
+                    <svg class="registration-icon" width="18" height="18">
+                        <use href="./images/icons.svg#email-form"></use>
+                    </svg>
+                </div>
+
+                <label class="registration-label" for="comment">Комментарий</label>
+                <textarea class="form-input comment" name="comment" id="comment" cals="30" rows="5"
+                    placeholder="Введите текст"></textarea>
+
+                <label class="policy-label">
+                    <input class="checkbox visually-hidden" type="checkbox" name="checkbox" value="agrement"
+                        id="checkbox" required />
+                    <svg class="checkbox-icon" width="16" height="15">
+                        <use class="checkbox-icon-empty" href="./images/icons/sprite.svg#icon-check-box"></use>
+                        <use class="checkbox-icon-checked" href="./images/icons/sprite.svg#icon-check"></use>
+                    </svg>
+                    <span class="checkbox-text"></span>Соглашаюсь с рассылкой и принимаю&nbsp;
+                    <a class="policy-link" href="" target="_blank" rel="noopener noreferrer">Условия договора</a>
+                </label>
+
+
+                <button class="registration-btn" type="submit">Відправити</button>
+            </form>
         </div>
     </div>
+
+    <!-- JS modal window script -->
     <script src="./js/modal.js"></script>
+
+    <!-- JS registration form -->
+    <script src="./js/registration.js"></script>
 </body>
 
 </html>
